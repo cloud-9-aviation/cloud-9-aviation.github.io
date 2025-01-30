@@ -3,7 +3,7 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "Cloud 9 Aviation LLC"
+title = "Cloud 9 Aviation"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
@@ -13,7 +13,7 @@ title = "Cloud 9 Aviation LLC"
   # description = "My awesome website"
 
 [params.author]
-  name = "Cloud 9 Aviation"
+  name = "Cloud 9 Aviation LLC"
   # image = "img/author.jpg"
   # headline = "I'm only human"
   # bio = "A little bit about you"

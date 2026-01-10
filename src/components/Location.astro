@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import FuelingStation from '../assets/photos/fueling-station.jpg';
+---
+<section class="bg-gray-50 py-10">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-5xl font-bold font-sans text-gray-800 mb-6 text-center">
+      Our Location
+    </h2>
+    <p class="text-center text-gray-600 mb-10">
+      Based at Corona Municipal Airport (KAJO), offering easy access to Southern California airspace.
+    </p>
+
+
+    <!-- Large card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <!-- Airport image -->
+      <Image src={FuelingStation} alt="Corona Municipal Airport" class="w-full object-cover h-32 md:h-96" />
+
+      <!-- Bottom features -->
+      <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
+        <!-- Feature 1 -->
+        <div class="p-6 text-center">
+          <h3 class="font-semibold text-gray-800 mb-2">24/7 Self-Serve Fuel</h3>
+          <p class="text-gray-600 text-sm">Convenient access for based and transient aircraft anytime.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="p-6 text-center">
+          <h3 class="font-semibold text-gray-800 mb-2">Pilot-Friendly</h3>
+          <p class="text-gray-600 text-sm">Non-towered environment ideal for training and personal flying.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="p-6 text-center">
+          <h3 class="font-semibold text-gray-800 mb-2">On-Site Cafe</h3>
+          <p class="text-gray-600 text-sm">Grab a coffee or snack between flights in a relaxed setting.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="p-6 text-center">
+          <h3 class="font-semibold text-gray-800 mb-2">Easy Parking</h3>
+          <p class="text-gray-600 text-sm">Plenty of ramp space and tie-downs for all sizes of general aviation aircraft.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

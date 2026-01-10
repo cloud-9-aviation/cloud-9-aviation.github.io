@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import DefaultImage from '../assets/photos/fueling-station.jpg';
+
+interface Props {
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string; // Optional: use custom image path
+}
+
+const title = Astro.props.title ?? "Cloud 9 Aviation - Rent Cessnas & Fly";
+const description = Astro.props.description ?? "Rent our Cessna 150M or 177 for flight training, local adventures, or building hours.";
+const url = Astro.props.url ?? "https://www.cloud9aviation.com/";
+
+// Resolve image via Astro
+const image = Astro.props.image ?? DefaultImage.src;
+---
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />

@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+import "@fontsource-variable/montserrat"; // Supports weights 100-900
+import OGMeta from "../components/OGMeta.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L5JM7WNV8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1L5JM7WNV8");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cloud 9 Aviation - Rent a Cessna</title>
+    <OGMeta
+      title="Cloud 9 Aviation. Rent a Cessna in Coronado, CA."
+      description="Fly our Cessna 150M or 177 for training, adventures, or hours building."
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

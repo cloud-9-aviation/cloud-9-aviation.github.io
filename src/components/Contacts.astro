@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<section class="bg-sky-50 py-10">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-5xl font-bold font-sans text-gray-800 mb-6 text-center">
+      Contact Us
+    </h2>
+    <p class="text-center text-gray-600 mb-10">
+      Get in touch with us anytime — email, call, or text to book your flight.
+    </p>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Email -->
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+        <Icon name="mdi:email" class="h-12 w-12 text-sky-600 mb-4" />
+        <h3 class="font-semibold text-gray-800 mb-2">Email</h3>
+        <a href="mailto:alina@cloud9aviation.info?subject=Booking%20a%20Flight%20with%20Cloud%209%20Aviation&body=Hi%2C%20I%20wanted%20to%20book%20flight" class="text-sky-600 hover:underline">
+          alina@cloud9aviation.info
+        </a>
+      </div>
+
+      <!-- Phone -->
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+        <Icon name="mdi:phone" class="h-12 w-12 text-sky-600 mb-4" />
+        <h3 class="font-semibold text-gray-800 mb-2">Call</h3>
+        <a href="tel:+16507728024" class="text-sky-600 hover:underline">
+          +1 (650) 772-8024
+        </a>
+      </div>
+
+      <!-- Text / SMS -->
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+        <Icon name="mdi:message-text" class="h-12 w-12 text-sky-600 mb-4" />
+        <h3 class="font-semibold text-gray-800 mb-2">Text</h3>
+        <a href="sms:+16507728024?body=Hi, I wanted to book a flight with Cloud 9 Aviation" class="text-sky-600 hover:underline">
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

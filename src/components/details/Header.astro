@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon/components";
+
+const {
+  airplane
+} = Astro.props;
+---
+<div class="flex justify-between items-center p-6">
+    <h1 class="text-3xl font-bold">{airplane.name}</h1>
+    <a class="flex items-center gap-2 font-bold" target="_blank" href={"https://registry.faa.gov/aircraftinquiry/Search/NNumberResult?NNumbertxt=" + airplane.tailNumber}>{airplane.tailNumber}<Icon name="mdi:open-in-new" /></a>
+</div>

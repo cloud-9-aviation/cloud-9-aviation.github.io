@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Contacts from "../components/Contacts.astro";
+import Footer from "../components/Footer.astro";
+import Directions from "../components/Directions.astro";
+
+// Pictures
+import Cessna150_1 from "../assets/photos/cessna-150m/1.jpg";
+import Cessna150_2 from "../assets/photos/cessna-150m/2.jpg";
+import Cessna150_3 from "../assets/photos/cessna-150m/3.jpg";
+import Cessna150_4 from "../assets/photos/cessna-150m/4.jpg";
+import Cessna150_5 from "../assets/photos/cessna-150m/5.jpg";
+import Cessna150_6 from "../assets/photos/cessna-150m/6.png";
+
+// Avionics
+import Cessna150_Avionics_Garmin_GNC_355_1 from "../assets/photos/cessna-150m/avionics/Garmin-GNC-355-1.jpg";
+import Cessna150_Avionics_Garmin_GNC_255_1 from "../assets/photos/cessna-150m/avionics/Garmin-GNC-255-1.png";
+import Cessna150_Avionics_Stratus_ES from "../assets/photos/cessna-150m/avionics/Stratus-ES.png";
+import Cessna150_Avionics_JPI_730 from "../assets/photos/cessna-150m/avionics/JPI-730.png";
+import Cessna150_Avionics_Garmin_GMA_345 from "../assets/photos/cessna-150m/avionics/Garmin-GMA-345.png";
+
+const layoutProps = {
+  title: "Book Cessna 150M at Corona Municipal Airport with Cloud 9 Aviation",
+  description: "Two-seat airplane for training, adventures, or hours building.",
+  image: Cessna150_1.src,
+};
+
+import DetailsHeader from "../components/details/Header.astro";
+
+const airplane = {
+  name: "Cessna 150M",
+  tailNumber: "N8590U",
+  wetRate: 145,
+  usefulLoad: 2295,
+};
+
+import DetailsHero from "../components/details/Hero.astro";
+import DetailsDescription from "../components/details/Description.astro";
+
+const images = [
+  { image: Cessna150_2, alt: "Cessna 150M Photo" },
+  { image: Cessna150_3, alt: "Cessna 150M Photo" },
+  { image: Cessna150_4, alt: "Cessna 150M Photo" },
+];
+
+const overview = [
+  `The Cessna 150M aircraft rental is a two-seat, single-engine,
+    high-wing airplane that has long been a favorite for flight training,
+    pilot instruction, and time building. Known for its reliability,
+    easy handling, and economical operating costs, this Cessna 150 rental
+    is an excellent choice for student pilots, hour-building pilots,
+    and recreational flying within a professional flight club environment.`,
+  `This airplane, upgraded with a Lycoming engine, is a significantly
+    enhanced version of the classic trainer, transforming it from its original
+    100-horsepower Continental configuration into a much more capable
+    150-horsepower performer.`,
+  `To increase the aircraft's useful load wheel
+    pants were removed, providing a weight reduction that allows more flexibility
+    for fuel, passengers, or training needs.`,
+];
+
+const features = [
+  { icon: "mdi:currency-usd", label: "Wet Rate:", value: "$145/hr" },
+  {
+    icon: "mdi:seat",
+    label: "Seats:",
+    value: "2 Sport (pilot and one passenger)",
+  },
+  { icon: "mdi:weight-pound", label: "Max Gross:", value: "1600 lbs" },
+  { icon: "mdi:weight-pound", label: "Useful Load:", value: "423.96 lbs" },
+  {
+    icon: "mdi:engine",
+    label: "Engine:",
+    text: "Lycoming O-320-E2D",
+    link: "https://en.wikipedia.org/wiki/Lycoming_O-320",
+  },
+  {
+    icon: "mdi:sunglasses",
+    label: "Sun Visors:",
+    text: "Rosen",
+    link: "https://www.rosenvisor.com/store/p13/Cessna1.html",
+  },
+  { icon: "mdi:lightbulb-multiple", label: "Lights:", value: "LED" },
+];
+
+const equipmentSummary = [
+  `The Cessna 150M comes with upgraded and basic VFR instruments, including an airspeed indicator, altimeter, vertical speed indicator, and fundamental navigation equipment.`,
+  `Upgraded avionics suite replaces the stock setup with modern, IFR-ready equipment. The Garmin GNC-355 with WAAS provides GPS/NAV/COMM and precision approaches, paired with a GNC-255 COMM and Stratus transponder for ADS-B OUT compliance and optional traffic/weather data, far beyond what a basic legacy stack offers.`,
+  `Engine monitoring is enhanced with a JPI-730 showing individual CHT and EGT for each cylinder, while the Garmin GMA-345 audio panel adds ATC playback and Bluetooth connectivity, replacing the older analog instruments and audio panels lacking digital features.`,
+];
+
+const equipmentDetails = [
+  {
+    name: "Garmin GNC-355",
+    image: Cessna150_Avionics_Garmin_GNC_355_1,
+    description:
+      "Get the advanced GPS navigation functions you've always dreamed of and modern COMM radio features that save you time and effort when you fly.",
+    link: "https://www.garmin.com/en-US/p/689774/pn/010-02232-51/",
+    text: "Specs & Manuals",
+  },
+  {
+    name: "Garmin GNC-255",
+    image: Cessna150_Avionics_Garmin_GNC_255_1,
+    description:
+      "As compact as it is capable, the GNC 255 can bring powerful Nav/Comm capabilities to virtually any cockpit. It also contains an internal VOR/LOC converter and 40-channel glideslope receiver.",
+    link: "https://www.garmin.com/en-US/p/102764/",
+    text: "Specs & Manuals",
+  },
+  {
+    name: "Garmin GMA-345",
+    image: Cessna150_Avionics_Garmin_GMA_345,
+    description:
+      "Built-in Bluetooth connectivity makes it easy for you to wirelessly pair your smartphone or other compatible device with the audio system. So, you can make and receive calls in the cockpit, as well as stream audio entertainment through as many as 6 headset positions in the aircraft.",
+    link: "https://www.garmin.com/en-US/p/506609/",
+    text: "Specs & Manuals",
+  },
+  {
+    name: "Stratus ES",
+    image: Cessna150_Avionics_Stratus_ES,
+    description:
+      "Stratus ESG was designed with non-glass panel aircraft in mind. Our simplified solution includes a 1090 ES transponder and certified WAAS GPS in the same box. It's truly an all-in-one box solution for 2020 compliance.",
+    link: "https://stratusbyappareo.com/products/stratus-transponders/",
+    text: "Specs",
+  },
+  {
+    name: "JPI-730",
+    image: Cessna150_Avionics_JPI_730,
+    description:
+      "The Engine Data Management 730 system is the most advanced and accurate piston engine-monitoring advisory instrument on the market. TSO'd for quality, the EDM 730 is offset, to allow vertical or horizontal fit in any panel.",
+    link: "https://www.jpinstruments.com/shop/edm-730-2/",
+    text: "Specs",
+  },
+];
+---
+
+<Layout {...layoutProps}>
+  <Header />
+  <section class="pb-6 max-w-6xl mx-auto">
+    <DetailsHeader airplane={airplane} />
+    <DetailsHero
+      LargeImage={Cessna150_1}
+      SmallImage1={Cessna150_6}
+      SmallImage2={Cessna150_5}
+    />
+    <DetailsDescription
+      overview={overview}
+      features={features}
+      equipmentSummary={equipmentSummary}
+      equipmentDetails={equipmentDetails}
+      images={images}
+    />
+    <Directions />
+  </section>
+  <Contacts />
+  <Footer />
+</Layout>

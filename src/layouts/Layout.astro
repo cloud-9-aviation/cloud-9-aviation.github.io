@@ -2,25 +2,34 @@
 import "../styles/global.css";
 import "@fontsource-variable/montserrat"; // Supports weights 100-900
 import OGMeta from "../components/OGMeta.astro";
+
+const {
+  title = "Cloud 9 Aviation — Aircraft Rentals at Corona Municipal Airport",
+  description = "Fly one of our Cessnas for training, adventures, or hours building.",
+  image,
+} = Astro.props;
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L5JM7WNV8"></script>
-    <script src="/scripts/gtag.js"></script>
+    <script src="/scripts/gtag.js" is:inline></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Cloud 9 Aviation - Rent a Cessna</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <OGMeta
-      title="Cloud 9 Aviation. Rent a Cessna in Corona, CA."
-      description="Fly our Cessna 150M or 177 for training, adventures, or hours building."
+      title={title}
+      description={description}
+      image={image}
     />
   </head>
   <body>

@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Contacts from "../components/Contacts.astro";
+import Footer from "../components/Footer.astro";
+import Directions from "../components/Directions.astro";
+
+// Pictures
+import Cessna177_1 from "../assets/photos/cessna-177/6.jpg";
+import Cessna177_2 from "../assets/photos/cessna-177/2.jpg";
+import Cessna177_3 from "../assets/photos/cessna-177/3.jpg";
+import Cessna177_4 from "../assets/photos/cessna-177/4.jpg";
+import Cessna177_5 from "../assets/photos/cessna-177/5.jpg";
+import Cessna177_6 from "../assets/photos/cessna-177/1.jpg";
+import Cessna177_7 from "../assets/photos/cessna-177/7.jpg";
+
+const layoutProps = {
+  title: "Book Cessna 177 at Corona Municipal Airport with Cloud 9 Aviation",
+  description:
+    "Four-seat airplane for training, adventures, cross-country or hours building.",
+  image: Cessna177_1.src,
+};
+
+import DetailsHeader from "../components/details/Header.astro";
+
+const airplane = {
+  name: "Cessna 177",
+  tailNumber: "N2262Y",
+  wetRate: 170,
+  usefulLoad: 780,
+};
+
+import DetailsHero from "../components/details/Hero.astro";
+import DetailsDescription from "../components/details/Description.astro";
+
+const images = [
+  { image: Cessna177_2, alt: "Cessna 177 Photo" },
+  { image: Cessna177_3, alt: "Cessna 177 Photo" },
+  { image: Cessna177_4, alt: "Cessna 177 Photo" },
+  { image: Cessna177_7, alt: "Cessna 177 Photo" },
+];
+
+const overview = [
+  `The Cessna 177 Cardinal aircraft rental is a four-seat, single-engine, high-wing airplane designed for comfortable cross-country flying and advanced flight training. The Cessna 177 is well known for its excellent visibility, stable handling, and efficient performance, making it a popular choice for pilots seeking a reliable and versatile general aviation aircraft. With its spacious cabin, modern design, and strong cruise capability, this Cessna Cardinal delivers a refined and confidence-inspiring flying experience.`,
+  `As a rental aircraft, the Cessna 177 is an excellent option for instrument training, time building, and personal or business travel. Its combination of comfort, performance, and economical operating costs makes the Cessna 177 Cardinal a smart choice for pilots looking for a dependable four-seat aircraft rental within a professional flight club environment.`,
+];
+
+const features = [
+  { icon: "mdi:currency-usd", label: "Wet Rate:", value: "Coming Soon" }, // $170/hr
+  {
+    icon: "mdi:seat",
+    label: "Seats:",
+    value: "4 Leather Interior (pilot and three passenger)",
+  },
+  {
+    icon: "mdi:seat",
+    label: "Back Seats:",
+    value: "Headset Plugs",
+  },
+  { icon: "mdi:weight-pound", label: "Useful Load:", value: "780 lbs" },
+  {
+    icon: "mdi:engine",
+    label: "Engine:",
+    text: "Lycoming 0-360-A1A",
+    link: "https://en.wikipedia.org/wiki/Lycoming_O-360",
+  },
+  { icon: "mdi:tire", label: "Wheels:", value: "Full Wheel Pants" },
+  {
+    icon: "mdi:headset",
+    label: "Co-Pilot features:",
+    value: "Push-to-Talk Capability",
+  },
+  {
+    icon: "mdi:lightbulb-multiple",
+    label: "Lights:",
+    value: "Whelen LED Position and Strobes, LED Landing and Taxi Lights",
+  },
+];
+
+const equipmentSummary = [
+  `The Cessna 177 features a well-balanced mix of traditional and modern flight instruments, combining dependable analog backups with a contemporary primary flight display. The Aspen E5 PFD provides a solid-state attitude and heading reference, digital airspeed and altitude, and a clear situational picture, while the GI 106B CDI and remote sensor modules support precise navigation and system reliability beyond a purely legacy panel.`,
+  `The avionics suite is centered around the Garmin GNS 530 WAAS, delivering IFR-certified GPS/NAV/COMM capability with LPV approach support. This is complemented by a NARCO Mark 12D second radio and the Garmin GTX 345 transponder, providing full ADS-B IN/OUT, including in-cockpit traffic and FIS-B weather, significantly enhancing both compliance and enroute awareness compared to older transponder-only configurations.`,
+  `Pilot workload and cockpit connectivity are further improved with a PS Engineering audio panel and four-place intercom, paired with the Garmin Flight Stream 210 for seamless wireless integration. This allows flight plans, traffic, and weather to be shared directly with iPad-based apps such as ForeFlight and Garmin Pilot, creating a highly capable, connected IFR platform well suited for cross-country and training operations.  `,
+];
+import Cessna177_Avionics_Garmin_GNS_530W from "../assets/photos/cessna-177/avionics/Garmin-GNS-530W.png";
+import Cessna177_Avionics_Aspen_E5_PFD from "../assets/photos/cessna-177/avionics/Aspen-E5-PFD.png";
+import Cessna177_Avionics_Garmin_Flight_Stream_210 from "../assets/photos/cessna-177/avionics/Garmin-Flight-Stream-210.png";
+import Cessna177_Avionics_Garmin_GA_35_GPS from "../assets/photos/cessna-177/avionics/Garmin-GA-35-GPS.png";
+import Cessna177_Avionics_Garmin_GI_106B from "../assets/photos/cessna-177/avionics/Garmin-GI-106B.png";
+import Cessna177_Avionics_Garmin_GTX_345 from "../assets/photos/cessna-177/avionics/Garmin-GTX-345.png";
+import Cessna177_Avionics_NARCO_Mark_12D_TSO from "../assets/photos/cessna-177/avionics/NARCO-Mark-12D-TSO.png";
+import Cessna177_Avionics_PS_Engineering_Audio_Panel from "../assets/photos/cessna-177/avionics/PS-Engineering-Audio-Panel.png";
+const equipmentDetails = [
+  {
+    name: "Garmin GTX 345 Transponder (ADS-B In/Out)",
+    image: Cessna177_Avionics_Garmin_GTX_345,
+    description:
+      "Mode S transponder with ADS-B In and Out, delivering traffic, FIS-B weather, and full 2020 compliance.",
+    link: "https://www.garmin.com/en-US/p/140949/",
+    text: "Specs",
+  },
+  {
+    name: "PS Engineering Audio Panel & 4-Place Intercom",
+    image: Cessna177_Avionics_PS_Engineering_Audio_Panel,
+    description:
+      "High-quality audio management system with integrated 4-place intercom for clear crew and passenger communications.",
+    link: "https://www.ps-engineering.com/audio.html",
+    text: "Specs",
+  },
+  {
+    name: "Garmin GNS 530W (WAAS)",
+    image: Cessna177_Avionics_Garmin_GNS_530W,
+    description:
+      "A highly capable IFR GPS/NAV/COM navigator with WAAS-enabled LPV approach capability, providing precise enroute navigation and advanced approach guidance.",
+    link: "https://www.garmin.com/en-US/p/8052/",
+    text: "Specs & Manuals",
+  },
+  {
+    name: "Aspen E5 PFD",
+    image: Cessna177_Avionics_Aspen_E5_PFD,
+    description:
+      "A compact electronic primary flight display that replaces traditional gyros, providing attitude, airspeed, altitude, vertical speed, and heading information in a modern digital format.",
+    link: "https://aspenavionics.com/products/general-aviation/evolution-e5-primary-flight-display",
+    text: "Product Info",
+  },
+  {
+    name: "Garmin GI 106B",
+    image: Cessna177_Avionics_Garmin_GI_106B,
+    description:
+      "A rugged, reliable VOR/LOC/GS indicator providing clear and precise course guidance for IFR navigation.",
+    link: "https://www.garmin.com/en-US/p/552213/",
+    text: "Specs",
+  },
+  {
+    name: "NARCO Mark 12D TSO",
+    image: Cessna177_Avionics_NARCO_Mark_12D_TSO,
+    description:
+      "Certified second COM radio providing dependable voice communications and redundancy for IFR operations.",
+    link: "https://www.manualslib.com/manual/1545749/Narco-Avionics-Mk12d-Tso.html",
+    text: "Docs",
+  },
+  {
+    name: "Garmin Flight Stream 210",
+    image: Cessna177_Avionics_Garmin_Flight_Stream_210,
+    description:
+      "Wirelessly links your iPad to your avionics, enabling flight plan transfer, database syncing, and viewing of traffic and weather directly on your portable device.",
+    link: "https://www.garmin.com/en-US/p/153681/",
+    text: "Specs & Manuals",
+  },
+  {
+    name: "Garmin GA 35 GPS Antenna",
+    image: Cessna177_Avionics_Garmin_GA_35_GPS,
+    description:
+      "High-performance GPS antenna designed to provide reliable satellite reception for WAAS-enabled Garmin navigators and transponders.",
+    link: "https://www.garmin.com/en-US/p/6573/",
+    text: "Specs",
+  },
+];
+---
+
+<Layout {...layoutProps}>
+  <Header />
+  <section class="pb-6 max-w-6xl mx-auto">
+    <DetailsHeader airplane={airplane} />
+    <DetailsHero
+      LargeImage={Cessna177_1}
+      SmallImage1={Cessna177_6}
+      SmallImage2={Cessna177_5}
+    />
+    <DetailsDescription
+      overview={overview}
+      features={features}
+      equipmentSummary={equipmentSummary}
+      equipmentDetails={equipmentDetails}
+      images={images}
+    />
+    <Directions />
+  </section>
+  <Contacts />
+  <Footer />
+</Layout>

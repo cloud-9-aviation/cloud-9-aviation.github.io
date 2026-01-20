@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+
+const {
+    LargeImage,
+    SmallImage1,
+    SmallImage2
+} = Astro.props;
+---
+<div class="grid-cols-1 sm:grid-cols-3 px-6 gap-4 grid">
+    <!-- Left / main image -->
+    <div class="col-span-2">
+    <Image
+        src={LargeImage}
+        alt="Cessna 150M N8590U"
+        class="w-full h-auto rounded-lg shadow"
+    />
+    <a href="#contacts">
+        <button class="btn btn-primary mt-4 w-full bg-sky-600 border-sky-600"
+        >Reserve this Aircraft</button
+        >
+    </a>
+    </div>
+
+    <!-- Right / stacked images -->
+    <div class="flex flex-col gap-4 hidden sm:flex">
+    <Image
+        src={SmallImage1}
+        alt="Cessna 150M Photo 6"
+        class="w-full h-auto rounded-lg shadow"
+    />
+    <Image
+        src={SmallImage2}
+        alt="Cessna 150M Photo 5"
+        class="w-full h-auto rounded-lg shadow"
+    />
+    </div>
+</div>

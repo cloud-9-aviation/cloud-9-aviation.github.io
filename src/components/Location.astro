@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import FuelingStation from '../assets/photos/fueling-station.jpg';
 ---
@@ -8,7 +9,7 @@ import FuelingStation from '../assets/photos/fueling-station.jpg';
       Our Location
     </h2>
     <p class="text-center text-gray-600 mb-10">
-      Based at Corona Municipal Airport (KAJO), offering easy access to Southern California airspace.
+      Based at <a class="text-sky-500 hover:underline" target="_blank" href="https://en.wikipedia.org/wiki/Corona_Municipal_Airport">Corona Municipal Airport (KAJO)</a>, offering easy access to Southern California airspace.
     </p>
 
 
@@ -21,23 +22,36 @@ import FuelingStation from '../assets/photos/fueling-station.jpg';
       <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
         <!-- Feature 1 -->
         <div class="p-6 text-center">
+          
+          <div class="w-8 h-8 mx-auto mb-3 text-sky-600">
+            <Icon name="mdi:hours-24" width="32" height="32" />
+          </div>
           <h3 class="font-semibold text-gray-800 mb-2">24/7 Self-Serve Fuel</h3>
           <p class="text-gray-600 text-sm">Convenient access for based and transient aircraft anytime.</p>
         </div>
         <!-- Feature 2 -->
         <div class="p-6 text-center">
+          <div class="w-8 h-8 mx-auto mb-3 text-sky-600">
+            <Icon name="mdi:airport" width="32" height="32" />
+          </div>
           <h3 class="font-semibold text-gray-800 mb-2">Pilot-Friendly</h3>
           <p class="text-gray-600 text-sm">Non-towered environment ideal for training and personal flying.</p>
         </div>
         <!-- Feature 3 -->
         <div class="p-6 text-center">
+          <div class="w-8 h-8 mx-auto mb-3 text-sky-600">
+            <Icon name="mdi:coffee" width="32" height="32" />
+          </div>
           <h3 class="font-semibold text-gray-800 mb-2">On-Site Cafe</h3>
           <p class="text-gray-600 text-sm">Grab a coffee or snack between flights in a relaxed setting.</p>
         </div>
         <!-- Feature 4 -->
         <div class="p-6 text-center">
-          <h3 class="font-semibold text-gray-800 mb-2">Easy Parking</h3>
-          <p class="text-gray-600 text-sm">Plenty of ramp space and tie-downs for all sizes of general aviation aircraft.</p>
+          <div class="w-8 h-8 mx-auto mb-3 text-sky-600">
+            <Icon name="mdi:airplane-takeoff" width="32" height="32" />
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Runways</h3>
+          <p class="text-gray-600 text-sm">Well-maintained asphalt runway 7/25, 3,200 ft (975 m).</p>
         </div>
       </div>
     </div>

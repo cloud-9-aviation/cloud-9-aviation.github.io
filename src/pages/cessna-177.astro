@@ -15,7 +15,7 @@ import Cessna177_6 from "../assets/photos/cessna-177/1.jpg";
 import Cessna177_7 from "../assets/photos/cessna-177/7.jpg";
 
 const layoutProps = {
-  title: "Book Cessna 177 at Corona Municipal Airport with Cloud 9 Aviation",
+  title: "Book Cessna 177 at Corona Municipal Airport (KAJO) with Cloud 9 Aviation",
   description:
     "Four-seat airplane for training, adventures, cross-country or hours building.",
   image: Cessna177_1.src,
@@ -46,7 +46,8 @@ const overview = [
 ];
 
 const features = [
-  { icon: "mdi:currency-usd", label: "Wet Rate:", value: "Coming Soon" }, // $170/hr
+  { icon: "mdi:currency-usd", label: "Wet Rate:", value: "$170/hr" },
+  { icon: "mdi:map-marker-radius", label: "Location:", value: "Corona Municipal Airport (KAJO)" },
   {
     icon: "mdi:seat",
     label: "Seats:",
@@ -174,7 +175,7 @@ const equipmentDetails = [
       equipmentDetails={equipmentDetails}
       images={images}
     />
-    <Directions />
+    <Directions location="Corona Municipal Airport (KAJO)" address="1971 Aviation Dr Unit 8, Corona, CA 92878" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8141.388053071811!2d-117.60822502358232!3d33.89606427321625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcc9005bb6c065%3A0x6b6a128f0bbdbc7b!2sCloud%209%20Aviation!5e1!3m2!1sen!2sus!4v1768011495751!5m2!1sen!2sus" />
   </section>
   <Contacts />
   <Footer />

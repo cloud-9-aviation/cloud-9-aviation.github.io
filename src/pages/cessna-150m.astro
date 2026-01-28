@@ -21,7 +21,7 @@ import Cessna150_Avionics_JPI_730 from "../assets/photos/cessna-150m/avionics/JP
 import Cessna150_Avionics_Garmin_GMA_345 from "../assets/photos/cessna-150m/avionics/Garmin-GMA-345.png";
 
 const layoutProps = {
-  title: "Book Cessna 150M at Corona Municipal Airport with Cloud 9 Aviation",
+  title: "Book Cessna 150M at John Wayne Airport, Orange County (KSNA) with Cloud 9 Aviation",
   description: "Two-seat airplane for training, adventures, or hours building.",
   image: Cessna150_1.src,
 };
@@ -62,6 +62,7 @@ const overview = [
 
 const features = [
   { icon: "mdi:currency-usd", label: "Wet Rate:", value: "$145/hr" },
+  { icon: "mdi:map-marker-radius", label: "Location:", value: "John Wayne Airport, Orange County (KSNA)" },
   {
     icon: "mdi:seat",
     label: "Seats:",
@@ -150,7 +151,7 @@ const equipmentDetails = [
       equipmentDetails={equipmentDetails}
       images={images}
     />
-    <Directions />
+    <Directions location="John Wayne Airport" address="18601 Airport Way, Santa Ana, CA 92707" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16324.203224231402!2d-117.86735075305084!3d33.678482643199786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdeedcbab40ef%3A0xc941e8f5c31119e2!2sJohn%20Wayne%20Airport!5e1!3m2!1sen!2sus!4v1769583104404!5m2!1sen!2sus"/>
   </section>
   <Contacts />
   <Footer />

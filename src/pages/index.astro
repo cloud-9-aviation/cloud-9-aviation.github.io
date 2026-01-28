@@ -7,13 +7,21 @@ import Location from '../components/Location.astro';
 import Contacts from '../components/Contacts.astro';
 import Directions from '../components/Directions.astro';
 import Footer from '../components/Footer.astro';
+
+const subheader = "Affordable aircraft rentals for time building at Corona Municipal Airport (KAJO) and John Wayne Airport, Orange County (KSNA)."
+
+const layoutProps = {
+  title: `Cloud 9 Aviation — ${subheader}`,
+  description: "Fly one of our Cessna airplanes for training, adventures, or hours building.",
+};
+
 ---
-<Layout>
+<Layout {...layoutProps}>
 	<Header />
-	<Hero />
+	<Hero subheader={subheader} />
 	<Fleet />
-	<Location />
+	<!-- <Location /> -->
 	<Contacts />
-	<Directions />
+	<!-- <Directions /> -->
 	<Footer />
 </Layout>

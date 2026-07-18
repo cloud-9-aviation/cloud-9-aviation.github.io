@@ -3,12 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Fleet from '../components/Fleet.astro';
-import Location from '../components/Location.astro';
 import Contacts from '../components/Contacts.astro';
-import Directions from '../components/Directions.astro';
 import Footer from '../components/Footer.astro';
 
-const subheader = "Affordable aircraft rentals for time building at Corona Municipal Airport (KAJO) and John Wayne Airport, Orange County (KSNA)."
+const subheader = "Affordable aircraft rentals for time building at John Wayne Airport, Orange County (KSNA)."
 
 const layoutProps = {
   title: `Cloud 9 Aviation — ${subheader}`,
@@ -20,8 +18,6 @@ const layoutProps = {
 	<Header />
 	<Hero subheader={subheader} />
 	<Fleet />
-	<!-- <Location /> -->
 	<Contacts />
-	<!-- <Directions /> -->
 	<Footer />
 </Layout>

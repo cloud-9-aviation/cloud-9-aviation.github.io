@@ -2,13 +2,6 @@
 import { Image } from 'astro:assets';
 import { Icon } from "astro-icon/components";
 
-// Importing images for Cessna 150M
-import Cessna150_3 from '../assets/photos/cessna-150m/1.jpg';
-import Cessna150_2 from '../assets/photos/cessna-150m/2.jpg';
-import Cessna150_1 from '../assets/photos/cessna-150m/3.jpg';
-import Cessna150_4 from '../assets/photos/cessna-150m/4.jpg';
-import Cessna150_5 from '../assets/photos/cessna-150m/5.jpg';
-
 // Importing images for Cessna 177
 import Cessna177_1 from '../assets/photos/cessna-177/1.jpg';
 import Cessna177_2 from '../assets/photos/cessna-177/2.jpg';
@@ -29,91 +22,6 @@ import Cessna177_7 from '../assets/photos/cessna-177/7.jpg';
     </p>
 
     <div class="grid gap-8 md:grid-cols-2">
-      <!-- Plane Card 1 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Plane info -->
-        <div class="flex justify-between items-center px-4 py-3">
-          <span class="text-xl font-semibold text-gray-800">Cessna 150M</span>
-          <span class="text-gray-600"><a class="flex items-center gap-2" target="_blank" href="https://registry.faa.gov/aircraftinquiry/Search/NNumberResult?NNumbertxt=N8590U"><Icon name="mdi:open-in-new" />N8590U</a></span>
-        </div>
-        <!-- Carousel -->
-        <!-- Carousel -->
-        <div class="carousel w-full">
-          <div id="slide11" class="carousel-item relative w-full">
-            <Image src={Cessna150_1} alt="Cessna 150M" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href="#slide15" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❮</a>
-              <a href="#slide12" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❯</a>
-            </div>
-          </div>
-          <div id="slide12" class="carousel-item relative w-full">
-            <Image src={Cessna150_2} alt="Cessna 150M" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href="#slide11" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❮</a>
-              <a href="#slide13" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❯</a>
-            </div>
-          </div>
-          <div id="slide13" class="carousel-item relative w-full">
-            <Image src={Cessna150_3} alt="Cessna 150M" class="w-full object-cover" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href="#slide12" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❮</a>
-              <a href="#slide14" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❯</a>
-            </div>
-          </div>
-          <div id="slide14" class="carousel-item relative w-full">
-            <Image src={Cessna150_4} alt="Cessna 150M" class="w-full object-cover" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href="#slide13" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❮</a>
-              <a href="#slide15" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❯</a>
-            </div>
-          </div>
-          <div id="slide15" class="carousel-item relative w-full">
-            <Image src={Cessna150_5} alt="Cessna 150M" class="w-full object-cover" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href="#slide14" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❮</a>
-              <a href="#slide11" class="btn btn-circle bg-white text-black border-white hover:bg-white hover:text-black">❯</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="relative w-full overflow-hidden">
-          <div class="flex transition-transform duration-500" data-carousel="plane1">
-            
-            
-            
-            
-          </div>
-          <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow" onclick="prevSlide('plane1')">◀</button>
-          <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow" onclick="nextSlide('plane1')">▶</button>
-        </div> -->
-
-        <div class="px-4 italic text-sm text-gray-700 line-clamp-5">One of the best-equipped aircraft rentals you’ll find — this Cessna 150 rental is ideal for flight training, time building, and pilot certification. Perfect for PPL, IFR. A flexible flight club–style schedule, ready when you are, with DPE and CFI on site.</div>
-
-        <!-- Features list -->
-        <ul class="pt-4 text-gray-700 text-sm"> <!-- px-4 py-3 space-y-1  -->
-          <!-- <li>Fuel Usage: 6 GPH</li> -->
-          <li class="px-4 py-2 flex items-center gap-2"><span class="text-sky-600"><Icon name="mdi:gas-station" /></span><b>Wet Rate:</b> Coming soon</li>
-          <li class="px-4 py-2 flex items-center gap-2 bg-sky-100"><span class="text-sky-600"><Icon name="mdi:map-marker-radius" /></span><b>Location:</b> John Wayne Airport (KSNA)</li>
-          <li class="px-4 py-2 flex items-center gap-2"><span class="text-sky-600"><Icon name="mdi:seat" /></span><b>Seats:</b> 2</li>
-          <li class="px-4 py-2 flex items-center gap-2 bg-sky-100"><span class="text-sky-600"><Icon name="mdi:engine" /></span><b>Engine:</b> 150 HP Lycoming</li> <!-- O-320-E2D -->
-          <!--
-          <li><b>Fligt Display:</b> Dual Garmin GI-275s (with synthetic vision)</li>
-          <li><b>Primary NAV/COM:</b> Garmin GNC-355 (WAAS)</li>
-          <li><b>Secondary NAV/COM:</b> Garmin GNC-255</li>
-          <li><b>Audio Panel:</b> GMA-345 </li>
-          <li><b>Engine Monitor:</b> JPI-730 </li>
-           -->
-          <!-- <li>Range: 400 miles</li> -->
-        </ul>
-        <div class="p-5">
-          <a href="/cessna-150m">
-            <button class="btn btn-primary mt-4 w-full bg-sky-600 border-sky-600"
-              >Learn More</button
-            >
-          </a>
-        </div>
-      </div>
-
       <!-- Plane Card 2 -->
       <div class="bg-white rounded-xl shadow-lg overflow-hidden">
 
@@ -192,7 +100,7 @@ import Cessna177_7 from '../assets/photos/cessna-177/7.jpg';
         <ul class="pt-4 text-gray-700 text-sm">
           <!-- <li>Fuel Usage: 8 GPH</li> -->
           <li class="px-4 py-2 flex items-center gap-2"><span class="text-sky-600"><Icon name="mdi:gas-station" /></span><b>Wet Rate:</b> $180 / Hobbs Hour</li>
-          <li class="px-4 py-2 flex items-center gap-2 bg-sky-100"><span class="text-sky-600"><Icon name="mdi:map-marker-radius" /></span><b>Location:</b> Corona Municipal Airport (KAJO)</li>
+          <li class="px-4 py-2 flex items-center gap-2 bg-sky-100"><span class="text-sky-600"><Icon name="mdi:map-marker-radius" /></span><b>Location:</b> John Wayne Airport (KSNA)</li>
           <li class="px-4 py-2 flex items-center gap-2"><span class="text-sky-600"><Icon name="mdi:seat" /></span><b>Seats:</b> 4</li>
           <li class="px-4 py-2 flex items-center gap-2 bg-sky-100"><span class="text-sky-600"><Icon name="mdi:engine" /></span><b>Engine:</b> 180 HP Lycoming</li> <!-- O-360-A4M -->
           <!-- <li>Range: 550 miles</li> -->
